@@ -24,6 +24,21 @@
 
 function compressWords(arr) {
   // Your code here
+  if (arr.length === 0) return [];
+  const result = [];
+  let i = 0;
+  while (i < arr.length) {
+    let count = 1;
+    let currentWord = arr[i];
+
+    while (i + 1 < arr.length && arr[i] === arr[i + 1]) {
+      count++;
+      i++;
+    }
+    result.push(count > 1 ? `${currentWord}${count}` : currentWord);
+    i++;
+  }
+  return result;
 }
 
 
