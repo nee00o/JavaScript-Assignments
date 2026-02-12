@@ -26,7 +26,11 @@
 */
 
 function countVowels(str) {
-  // Your code here
+      // Your code here
+      let n = str.length
+      const vowel = "aeiouAEIOU";
+      const ans = str.split('').filter(letter => vowel.includes(letter));
+      return ans.length;
 }
 
 module.exports = { countVowels };
