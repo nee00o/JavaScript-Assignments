@@ -23,6 +23,8 @@
 
 function reverseInteger(num) {
   // Your code here
+  const reverse = Math.abs(num).toString().split('').reverse().join('');
+  return parseInt(reverse)*Math.sign(num);
 }
 
 module.exports = reverseInteger;
